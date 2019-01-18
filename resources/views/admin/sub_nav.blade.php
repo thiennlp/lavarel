@@ -4,7 +4,7 @@
             <div class="nav-link">
                 <div class="user-wrapper">
                     <div class="profile-image">
-                        <img src="http://localhost/laravel/bootstrap/images/faces/face1.jpg" alt="profile image">
+                        <img src="{{url('/bootstrap/images/faces/face1.jpg')}}" alt="profile image">
                     </div>
                     <div class="text-wrapper">
                         <p class="profile-name">Richard V.Welsh</p>

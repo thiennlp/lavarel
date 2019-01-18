@@ -11,40 +11,46 @@
                     <div class="form-group row">
                         <label for="type" class="col-sm-2 col-form-label">Type</label>
                         <div class="col-sm-10">
-                            <select class="form-control" name="type" id="type">
+                            <select class="form-control {{ $errors->has('type') ? 'is-invalid' : ''}}" name="type" id="type">
                                 <option>Choose...</option>
                                 <option value="1" {{$user->type == 1 ? 'selected' : ''}}>Client</option>
                                 <option value="2" {{$user->type == 2 ? 'selected' : ''}}>Manage</option>
                             </select>
+                            <div class="invalid-feedback">{{$errors->first('type')}}</div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="name" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="name" name="name" value="{{$user->name}}" placeholder="Name">
+                            <input type="text" class="form-control {{ $errors->has('name') ? 'is-invalid' : ''}}" id="name" name="name" value="{{$user->name}}" placeholder="Name">
+                            <div class="invalid-feedback">{{$errors->first('name')}}</div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="user" class="col-sm-2 col-form-label">User</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="user" name="user" value="{{$user->user}}" placeholder="User">
+                            <input type="text" class="form-control {{ $errors->has('user') ? 'is-invalid' : ''}}" id="user" name="user" value="{{$user->user}}" placeholder="User">
+                            <div class="invalid-feedback">{{$errors->first('user')}}</div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="password" class="col-sm-2 col-form-label">Password</label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" id="password" name="password" value="{{$user->password}}" placeholder="Password">
+                            <input type="password" class="form-control {{ $errors->has('password') ? 'is-invalid' : ''}}" id="password" name="password" value="{{$user->password}}" placeholder="Password">
+                            <div class="invalid-feedback">{{$errors->first('password')}}</div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="email" class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" id="email" name="email" value="{{$user->email}}" placeholder="Email">
+                            <input type="email" class="form-control {{ $errors->has('email') ? 'is-invalid' : ''}}" id="email" name="email" value="{{$user->email}}" placeholder="Email">
+                            <div class="invalid-feedback">{{$errors->first('email')}}</div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
                             <button type="submit" class="btn btn-primary">Save</button>
+                            <a class="btn btn-danger" href="{{ url('admin/user') }}" role="button">Cancel</a>
                         </div>
                     </div>
                 </form>

@@ -2,10 +2,10 @@
     
     <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
         <a class="navbar-brand brand-logo" href="index.html">
-            <img src="http://localhost/laravel/bootstrap/images/logo.svg" alt="logo" />
+            <img src="{{url('/bootstrap/images/logo.svg')}}" alt="logo" />
         </a>
         <a class="navbar-brand brand-logo-mini" href="index.html">
-            <img src="http://localhost/laravel/bootstrap/images/logo-mini.svg" alt="logo" />
+            <img src="{{url('/bootstrap/images/logo-mini.svg')}}" alt="logo" />
         </a>
     </div>
 
@@ -40,7 +40,7 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
-                            <img src="http://localhost/laravel/bootstrap/images/faces/face4.jpg" alt="image" class="profile-pic">
+                            <img src="{{url('/bootstrap/images/faces/face4.jpg')}}" alt="image" class="profile-pic">
                         </div>
                         <div class="preview-item-content flex-grow">
                             <h6 class="preview-subject ellipsis font-weight-medium text-dark">David Grey
@@ -54,7 +54,7 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
-                            <img src="http://localhost/laravel/bootstrap/images/faces/face2.jpg" alt="image" class="profile-pic">
+                            <img src="{{url('/bootstrap/images/faces/face2.jpg')}}" alt="image" class="profile-pic">
                         </div>
                         <div class="preview-item-content flex-grow">
                             <h6 class="preview-subject ellipsis font-weight-medium text-dark">Tim Cook
@@ -68,7 +68,7 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
-                            <img src="http://localhost/laravel/bootstrap/images/faces/face3.jpg" alt="image" class="profile-pic">
+                            <img src="{{url('/bootstrap/images/faces/face3.jpg')}}" alt="image" class="profile-pic">
                         </div>
                         <div class="preview-item-content flex-grow">
                             <h6 class="preview-subject ellipsis font-weight-medium text-dark"> Johnson
@@ -139,7 +139,7 @@
             <li class="nav-item dropdown d-none d-xl-inline-block">
                 <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                     <span class="profile-text">Hello, Richard V.Welsh !</span>
-                    <img class="img-xs rounded-circle" src="http://localhost/laravel/bootstrap/images/faces/face1.jpg" alt="Profile image">
+                    <img class="img-xs rounded-circle" src="{{url('/bootstrap/images/faces/face1.jpg')}}" alt="Profile image">
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                     <a class="dropdown-item p-0">

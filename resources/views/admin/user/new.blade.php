@@ -13,8 +13,8 @@
                         <div class="col-sm-10">
                             <select class="form-control {{ $errors->has('type') ? 'is-invalid' : ''}}" name="type" value="{{ old('type') }}" id="type">
                                 <option value="">Choose...</option>
-                                <option value="1">Client</option>
-                                <option value="2">Manage</option>
+                                <option value="1" {{old('type') == 1 ? 'selected' : ''}}>Client</option>
+                                <option value="2" {{old('type') == 2 ? 'selected' : ''}}>Manage</option>
                             </select>
                             <div class="invalid-feedback">{{$errors->first('type')}}</div>
                         </div>
@@ -50,6 +50,7 @@
                     <div class="form-group row">
                         <div class="col-sm-10">
                             <button type="submit" class="btn btn-primary">Save</button>
+                            <a class="btn btn-danger" href="{{ url('admin/user') }}" role="button">Cancel</a>
                         </div>
                     </div>
                 </form>

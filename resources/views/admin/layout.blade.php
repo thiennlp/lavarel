@@ -5,10 +5,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>@yield('title')</title>
-        <link rel="stylesheet" href="http://localhost/laravel/bootstrap/vendors/css/vendor.bundle.base.css">
-        <link rel="stylesheet" href="http://localhost/laravel/bootstrap/vendors/css/vendor.bundle.addons.css">
-        <link rel="stylesheet" href="http://localhost/laravel/bootstrap/css/style.css">
-        <link rel="shortcut icon" href="http://localhost/laravel/bootstrap/images/favicon.png" />
+        <link rel="stylesheet" href="{{url('/bootstrap/vendors/css/vendor.bundle.base.css')}}">
+        <link rel="stylesheet" href="{{url('/bootstrap/vendors/css/vendor.bundle.base.css')}}">
+        <link rel="stylesheet" href="{{url('/bootstrap/vendors/css/vendor.bundle.addons.css')}}">
+        <link rel="stylesheet" href="{{url('/bootstrap/css/style.css')}}">
+        <link rel="shortcut icon" href="{{url('/laravel/bootstrap/images/favicon.png')}}" />
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     </head>
 
@@ -32,8 +33,8 @@
             </div>
             @yield('modal')
         </div>
-        <script src="http://localhost/laravel/bootstrap/vendors/js/vendor.bundle.base.js"></script>
-        <script src="http://localhost/laravel/bootstrap/vendors/js/vendor.bundle.addons.js"></script>
+        <script src="{{url('/bootstrap/vendors/js/vendor.bundle.base.js')}}"></script>
+        <script src="{{url('/bootstrap/vendors/js/vendor.bundle.addons.js')}}"></script>
     </body>
 
 </html>
