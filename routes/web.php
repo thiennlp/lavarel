@@ -19,4 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/user', 'UserController@index');
+/*
+* Page User
+*/
+
+Route::get('/user', 'UserController@index')->name('user');
+Route::get('/user/edit/{id}', 'UserController@getForm');
+Route::post('/user/edit/{id}', 'UserController@save');
