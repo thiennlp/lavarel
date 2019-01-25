@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Auth;
 use App\User;
 
 class UserController extends Controller
@@ -64,16 +65,34 @@ class UserController extends Controller
      * @return view
      */
     public function save(Request $request , $id = "") {
+        // get info user login
+        $user = auth::user();
+
+        // create or update
         if (!empty($id)) {
             User::where('id', $id)->update([
                 'type' => $request->type,
                 'name' => $request->name,
                 'status' => $request->status,
+                'updated_by' => $user->id
             ]);
-            return redirect()->route('user');
+        } else {
+            // $user_id = time();
+            // User::create([
+            //     'id'         => $user_id,
+            //     'type'       => 1,
+            //     'status'     => 1,
+            //     'name'       => $data['name'],
+            //     'username'   => $data['username'],
+            //     'email'      => $data['email'],
+            //     'password'   => Hash::make($data['password']),
+            //     'created_by' => $user_id,
+            //     'updated_by' => $user_id,
+            // ]);
+    
         }
+        return redirect()->route('user');
 
+        
     }
-
-
 }
