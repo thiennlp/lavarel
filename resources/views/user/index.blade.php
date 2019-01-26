@@ -7,6 +7,9 @@
             <div class="card-header">User</div>
 
             <div class="card-body">
+                <div class="row justify-content-start mb-3 ml-2">
+                    <a class="btn btn-info btn-sm" href="{{ url('/user/new') }}" role=button>New User</a>
+                </div>
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>

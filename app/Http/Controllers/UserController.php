@@ -56,6 +56,8 @@ class UserController extends Controller
         if (!empty($id)) {
             $user = User::where('id', $id)->get()->first();
             return view('user.edit', ['user' => $user]);
+        } else {
+            return view('user.new');
         }
     }
 

@@ -26,3 +26,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user', 'UserController@index')->name('user');
 Route::get('/user/edit/{id}', 'UserController@getForm');
 Route::post('/user/edit/{id}', 'UserController@save');
+Route::get('/user/new', 'UserController@getForm')->name('user_new');
